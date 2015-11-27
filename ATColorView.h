@@ -2,7 +2,7 @@
      File: ATColorView.h 
  Abstract: A basic NSView subclass that supports having an animatable background color (NOTE: the animation only works when the view is layer backed).
   
-  Version: 1.2 
+  Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2011 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
 */
 
@@ -50,11 +50,10 @@
 
 @interface ATColorView : NSControl {
 @private
-    BOOL drawBorder;
-    NSColor *backgroundColor;
+    NSColor *_backgroundColor;
 }
 
-@property(retain) NSColor *backgroundColor;
+@property(retain, nonatomic) NSColor *backgroundColor;
 @property BOOL drawBorder;
 
 @end

@@ -43,6 +43,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* TableViewPlayground-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TableViewPlayground-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TableViewPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0A0BE5157979E600ABB83F /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		9D0BCE32109796B1004BFAA8 /* ATSampleWindowRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSampleWindowRowView.h; sourceTree = "<group>"; };
 		9D0BCE33109796B1004BFAA8 /* ATSampleWindowRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSampleWindowRowView.m; sourceTree = "<group>"; };
 		9D3CD9DC10851DA30026BE44 /* ATTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTableCellView.h; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		29B97314FDCFA39411CA2CEA /* AnimatedTableView */ = {
 			isa = PBXGroup;
 			children = (
+				9D0A0BE5157979E600ABB83F /* ReadMe.txt */,
 				9DD17438108F72F9006E27B5 /* ATApplicationController.h */,
 				9DD17439108F72F9006E27B5 /* ATApplicationController.m */,
 				9D0BCE32109796B1004BFAA8 /* ATSampleWindowRowView.h */,

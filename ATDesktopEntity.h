@@ -2,7 +2,7 @@
      File: ATDesktopEntity.h 
  Abstract: A sample model object. A base abstract class (ATDesktopEntity) implements caching of a file URL. One concrete subclass implements the ability to have an array of children (ATDesktopFolderEntity). Another (ATDesktopImageEntity) represents an image suitable for the desktop wallpaper.
   
-  Version: 1.2 
+  Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2011 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
 */
 
@@ -91,7 +91,7 @@
 
 // Access to the image. This property can be observed to find out when it changes and is fully loaded.
 @property (retain) NSImage *image;
-@property (readonly, retain) NSImage *thumbnailImage;
+@property (readonly, retain, nonatomic) NSImage *thumbnailImage;
 
 // Asynchronously loads the image (if not already loaded). A KVO notification is sent out when the image is loaded.
 - (void)loadImage;

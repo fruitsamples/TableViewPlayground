@@ -8,13 +8,13 @@ This example demonstrates the View Based TableView. The demo focuses on three ar
 ===========================================================================
 BUILD REQUIREMENTS:
 
-Mac OS X v10.7 or later
+Mac OS X v10.8 or later
 XCode 4.1 or later.
 
 ===========================================================================
 RUNTIME REQUIREMENTS:
 
-Mac OS X v10.7 or later
+Mac OS X v10.8 or later
 
 ===========================================================================
 PACKAGING LIST:
@@ -61,5 +61,8 @@ Version 1.0
 Version 2.0
 - General project updates.
 
+Version 3.0
+- Updates for Mountain Lion.
+
 ===========================================================================
-Copyright (C) 2010 Apple Inc. All rights reserved.
+Copyright (C) 2010-2012 Apple Inc. All rights reserved.

@@ -2,7 +2,7 @@
      File: ATDesktopEntity.m
  Abstract: A sample model object. A base abstract class (ATDesktopEntity) implements caching of a file URL. One concrete subclass implements the ability to have an array of children (ATDesktopFolderEntity). Another (ATDesktopImageEntity) represents an image suitable for the desktop wallpaper.
  
-  Version: 1.2
+  Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2012 Apple Inc. All Rights Reserved.
  
 */
 
@@ -192,7 +192,7 @@
 @interface ATDesktopImageEntity()
 
 // Private read/write access to the thumbnailImage
-@property (readwrite, retain) NSImage *thumbnailImage;  
+@property (readwrite, retain, nonatomic) NSImage *thumbnailImage;  
 
 @property (readwrite) BOOL imageLoading;
 
@@ -238,7 +238,6 @@ static NSOperationQueue *ATSharedOperationQueue() {
 @synthesize fillColorName = _fillColorName;
 @synthesize imageLoading = _imageLoading;
 @synthesize image = _image;
-@synthesize thumbnailImage = _thumbnailImage;
 @synthesize title =  _title;
 
 static NSImage *ATThumbnailImageFromImage(NSImage *image) {
@@ -269,6 +268,13 @@ static NSImage *ATThumbnailImageFromImage(NSImage *image) {
         [self loadImage];
     }        
     return _thumbnailImage;
+}
+
+- (void)setThumbnailImage:(NSImage *)img {
+    if (img != _thumbnailImage) {
+        [_thumbnailImage release];
+        _thumbnailImage = [img retain];
+    }
 }
 
 - (void)loadImage {
